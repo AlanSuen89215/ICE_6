@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o89-Sc-9GV">
+                                <rect key="frame" x="119" y="740" width="153" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New Photo or Video"/>
+                                <connections>
+                                    <action selector="shootPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IxQ-aq-ase"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-PR-7TN">
+                                <rect key="frame" x="127" y="779" width="137" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pick From Library"/>
+                                <connections>
+                                    <action selector="selectExistingPictureOrVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWk-nJ-mGG"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MO4-zm-ApN">
+                                <rect key="frame" x="16" y="44" width="358" height="688"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TsP-PR-7TN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="1GW-Gu-nwy"/>
+                            <constraint firstItem="MO4-zm-ApN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9fJ-qG-06G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o89-Sc-9GV" secondAttribute="trailing" constant="118" id="FYR-Od-Cjd"/>
+                            <constraint firstItem="o89-Sc-9GV" firstAttribute="top" secondItem="MO4-zm-ApN" secondAttribute="bottom" constant="8" id="KXX-ei-L1i"/>
+                            <constraint firstItem="TsP-PR-7TN" firstAttribute="top" secondItem="o89-Sc-9GV" secondAttribute="bottom" constant="8" symbolic="YES" id="WcQ-Fw-BtY"/>
+                            <constraint firstItem="MO4-zm-ApN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bmS-Hx-wGi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TsP-PR-7TN" secondAttribute="bottom" id="fqT-Kp-XOg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TsP-PR-7TN" secondAttribute="trailing" constant="126" id="h9C-Qg-Dzw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MO4-zm-ApN" secondAttribute="trailing" constant="16" id="qAy-o6-RRn"/>
+                            <constraint firstItem="o89-Sc-9GV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="yua-ds-U06"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="MO4-zm-ApN" id="hHb-5Y-pJN"/>
+                        <outlet property="takePictureButton" destination="o89-Sc-9GV" id="fq7-9j-EKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.23076923076923" y="69.66824644549763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
